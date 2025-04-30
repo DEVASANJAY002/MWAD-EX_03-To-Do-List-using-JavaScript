@@ -1,0 +1,134 @@
+/* General reset for margins, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and center alignment for the container */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container for the to-do app */
+.container {
+    background-color: white;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    text-transform: uppercase;
+}
+
+/* Input and button container */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Input field for adding a task */
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Add Task button */
+button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 15%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the task list */
+ul.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual task style */
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+/* Task label text */
+.task label {
+    font-size: 1em;
+    flex-grow: 1;
+    word-wrap: break-word;
+}
+
+/* Checkbox style */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Strikethrough effect for completed tasks */
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Delete button styling */
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+}
+
+/* Hover effect for tasks */
+.task:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.03);
+}
